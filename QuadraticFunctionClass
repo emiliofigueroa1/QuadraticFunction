@@ -1,4 +1,4 @@
-ublic class QuadraticFunction
+public class QuadraticFunction
 {
     private double a;
     private double b;
