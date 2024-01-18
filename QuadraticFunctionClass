@@ -1,0 +1,65 @@
+ublic class QuadraticFunction
+{
+    private double a;
+    private double b;
+    private double c;
+    public QuadraticFunction()
+    {
+       a = 1;
+    }
+    
+    public QuadraticFunction(double one, double two, double three)
+    {
+        a = one;
+        b = two;
+        c = three; 
+    }
+    
+    public double findY(double x)
+    {
+        return a * (x * x) + b * x + c;
+    }
+    
+    public double findD()
+    {
+        return Math.pow(b, 2) - (4 * a * c);
+    }
+    
+    public String evaluateD()
+    {
+        if(Math.sqrt(findD()) > 0)
+            return "2 real solutions";
+        else if(findD() < 0)
+            return "no real solutions";
+        else 
+            return "1 real solution";       
+    }
+    
+    public double[] findIntercepts()
+    {
+        double[] arr = new double[2];
+        if(evaluateD().equals("2 real solutions"))
+        {
+            arr[0] = (( -b + Math.sqrt(findD()))/(a * 2));
+            arr[1] = (( -b - Math.sqrt(findD()))/(a * 2));
+        }
+        else if(evaluateD().equals("1 real solution"))
+        {
+            arr[0] = (( -b + Math.sqrt(findD()))/(a * 2));
+            arr[1] = (( -b + Math.sqrt(findD()))/(a * 2));
+        }
+        else
+        {
+           return null;
+        }   
+        return arr;
+    }
+    
+    public String toString()
+    {
+        return a + "x^2 + "  + b +"x + " + c;
+    }
+    
+     
+
+}
