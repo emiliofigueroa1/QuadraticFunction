@@ -1,0 +1,24 @@
+public class QuadraticFunctionRunner
+{
+    public static void main(String [] args)
+    {
+        // creates a function with 3 values a, b and c that populate a Quadratic Equation
+        QuadraticFunction function1 = new QuadraticFunction(1, 4, 4);
+        
+        // prints actual description of Quadratic in ax^2 + bx + c form
+        System.out.println("Quadratic Function Equation: " + function1.toString());
+        
+        // prints the vlaue of the discriminant -b - 4(a)(c)
+        System.out.println("Discriminant: " + function1.findD());
+        
+        // prints one of three statements on how many real solutions come out of the function
+        System.out.println("Amount of Solutions: " + function1.evaluateD());
+        
+        // prints both solutions through the quadratic equation 
+        System.out.println("Intercepts/Solutions: " + function1.findIntercepts()[0] + ", " +  function1.findIntercepts()[1]);
+        
+        // prints Y with a certain x value 
+        System.out.println("f(x) = " + function1.findY(3));
+
+    }
+}
