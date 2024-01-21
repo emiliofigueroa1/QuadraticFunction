@@ -3,6 +3,7 @@ public class QuadraticFunction
     private double a;
     private double b;
     private double c;
+
     public QuadraticFunction()
     {
        a = 1;
