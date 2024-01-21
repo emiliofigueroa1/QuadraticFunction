@@ -59,7 +59,19 @@ public class QuadraticFunction
     {
         return "y = " + a + "x^2 + "  + b +"x + " + c;
     }
-    
-     
 
+
+/* Takes into account for negative numbers in the literal toString form of the Quadratic. Replaces toString logic.
+        if(b < 0 && c < 0)
+            return "y = " + a + "x^2 - "  + Math.abs(b) +"x - " + Math.abs(c);
+        else if(b < 0)
+            return "y = " + a + "x^2 - "  + Math.abs(b) +"x + " + c;
+        else if(c < 0)
+            return "y = " + a + "x^2 + "  + b +"x - " + Math.abs(c);
+        else
+            return "y = " + a + "x^2 + "  + b +"x + " + c;
+*/
+
+
+    
 }
